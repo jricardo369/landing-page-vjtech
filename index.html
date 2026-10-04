@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VJTech — Desarrollo web, móvil y apps a medida</title>
+  <meta name="description" content="VJTech: páginas web, landings, páginas de presentación, invitaciones virtuales, hojas de presentación personal, apps móviles con Ionic y apps web con Angular para gestión de negocios." />
+  <link rel="canonical" href="https://vjtech.mx/" />
+  <!-- Open Graph / Twitter (vista previa al compartir en WhatsApp y redes) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_MX" />
+  <meta property="og:site_name" content="VJTech" />
+  <meta property="og:title" content="VJTech — Desarrollo web, móvil y apps a medida" />
+  <meta property="og:description" content="Páginas web, landings de alta conversión, invitaciones virtuales y apps móviles a medida. Código limpio, deploy rápido, soporte real." />
+  <meta property="og:url" content="https://vjtech.mx/" />
+  <meta property="og:image" content="https://vjtech.mx/logo.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="VJTech — Desarrollo web, móvil y apps a medida" />
+  <meta name="twitter:description" content="Páginas web, landings de alta conversión y apps móviles a medida." />
+  <meta name="twitter:image" content="https://vjtech.mx/logo.png" />
+  <!-- Analytics GA4: pon tu ID en ANALYTICS_ID dentro de app.js para activar la medición -->
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <!-- CSP temporal vía meta (mover a headers nginx al desplegar en EC2) -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://www.google-analytics.com; connect-src 'self' https:; form-action 'self'; base-uri 'self'; frame-ancestors 'none'; object-src 'none'" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="logo.png" />
+</head>
+<body id="inicio">
+  <header class="nav" id="topNav">
+    <a class="brand" href="#inicio" data-scroll aria-label="VJTech inicio">
+      <span class="logo-slot" aria-hidden="true">
+        <img src="logo.png" alt="VJTech" width="42" height="42" />
+      </span>
+      <span class="brand-name">VJTech</span>
+    </a>
+    <nav class="links" aria-label="Principal">
+      <a href="#inicio" data-scroll class="active">Inicio</a>
+      <a href="#servicios" data-scroll>Servicios</a>
+      <a href="#proyectos" data-scroll>Proyectos</a>
+      <a href="#proceso" data-scroll>Proceso</a>
+      <a href="#planes" data-scroll>Planes</a>
+      <a href="#contacto" data-scroll>Contacto</a>
+    </nav>
+    <div class="actions">
+      <a class="btn primary" href="#contacto" data-scroll>Cotizar ↗</a>
+    </div>
+    <button class="menu" id="menuBtn" aria-label="Abrir menú" aria-expanded="false">☰</button>
+  </header>
+  <div class="mobile" id="mobileMenu">
+    <a href="#inicio" data-scroll>Inicio</a>
+    <a href="#servicios" data-scroll>Servicios</a>
+    <a href="#proyectos" data-scroll>Proyectos</a>
+    <a href="#proceso" data-scroll>Proceso</a>
+    <a href="#planes" data-scroll>Planes</a>
+    <a href="#contacto" data-scroll class="btn primary">Cotizar ↗</a>
+  </div>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-inner">
+      <p class="kicker">AGENCIA DE SOFTWARE — WEB · MOBILE · CLOUD</p>
+      <h1><span>CONSTRUIMOS</span><br /><em>SOFTWARE QUE VENDE.</em></h1>
+      <p class="sub">Páginas web, landings de alta conversión, páginas de presentación, invitaciones virtuales y hojas de presentación personal, además de apps móviles a medida y sistemas web para gestionar tu negocio. Código limpio, deploy rápido, soporte real.</p>
+      <div class="cta">
+        <a href="#servicios" class="btn primary" data-scroll>Ver servicios ↗</a>
+        <a href="#proyectos" class="btn ghost" data-scroll>Ver proyectos</a>
+        <a href="#casos" class="btn ghost" data-scroll>Casos de éxito</a>
+      </div>
+      <div class="hero-cards">
+        <div class="hcard"><strong>NG</strong><span>Angular · web + landings</span></div>
+        <div class="hcard"><strong>IONIC</strong><span>iOS + Android a medida</span></div>
+        <div class="hcard"><strong>ERP</strong><span>sistemas para tu negocio</span></div>
+      </div>
+      <div class="stack-bar" aria-label="Tecnologías">
+        <span>Angular</span><span>Ionic</span><span>TypeScript</span><span>HTML</span><span>CSS</span><span>Node</span><span>API REST</span>
+      </div>
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true"><div class="track" id="marqueeTrack">
+      <span>DESARROLLO WEB ✳ APPS MÓVILES ✳ LANDINGS ✳ INVITACIONES VIRTUALES ✳ HOJAS DE PRESENTACIÓN ✳ SISTEMAS ERP ✳ UI/UX ✳ APIS ✳ DESARROLLO WEB ✳ APPS MÓVILES ✳ LANDINGS ✳ INVITACIONES VIRTUALES ✳&nbsp;</span>
+    </div></div>
+
+    <!-- SERVICIOS -->
+    <section id="servicios" class="section scroll-target">
+      <p class="label">01 / SERVICIOS — LO QUE HACEMOS</p>
+      <h2>TODO LO QUE TU NEGOCIO<br /><em>NECESITA EN DIGITAL.</em></h2>
+      <p class="muted">Ocho servicios, un solo equipo. Desde sistemas a medida hasta páginas sencillas como invitaciones y presentaciones personales. Toca cada tarjeta para ver el detalle.</p>
+      <div class="grid3" id="services"></div>
+    </section>
+
+    <!-- PROYECTOS -->
+    <section id="proyectos" class="section alt scroll-target">
+      <p class="label">02 / PROYECTOS — CASOS TIPO</p>
+      <h2>DEL LANDING AL SISTEMA COMPLETO.</h2>
+      <p class="muted">Filtra por tipo. Ejemplos del alcance que entregamos.</p>
+      <div class="filters">
+        <button class="chip active" data-f="all">Todos</button>
+        <button class="chip" data-f="web">Web</button>
+        <button class="chip" data-f="mobile">Móvil</button>
+        <button class="chip" data-f="sistema">Sistemas</button>
+      </div>
+      <div class="agenda" id="projects"></div>
+    </section>
+
+    <!-- PROCESO -->
+    <section id="proceso" class="section scroll-target">
+      <p class="label">03 / PROCESO — CÓMO TRABAJAMOS</p>
+      <h2>CLARO. RÁPIDO. SIN HUMO.</h2>
+      <div class="grid4" id="steps"></div>
+    </section>
+
+    <!-- PLANES -->
+    <section id="planes" class="section alt scroll-target">
+      <p class="label">04 / PLANES — ELIGE TU PUNTO DE PARTIDA</p>
+      <h2>UN PLAN PARA CADA ETAPA.</h2>
+      <div class="grid3">
+        <div class="price"><h3>Landing</h3><p class="p">$4,999</p><ul><li>1 landing page</li><li>Textos que venden + diseño + deploy</li><li>Formulario + botón a WhatsApp</li></ul><button class="btn ghost" data-plan="Landing">Elegir</button></div>
+        <div class="price hot"><h3>Negocio · Web</h3><p class="p">$12,999</p><ul><li>Página web 5 secciones</li><li>Panel administrable</li><li>SEO + Analytics</li></ul><button class="btn primary" data-plan="Negocio Web">Elegir</button></div>
+        <div class="price"><h3>A medida</h3><p class="p">Cotizar</p><ul><li>App móvil o sistema ERP</li><li>API + base de datos</li><li>Soporte prioritario</li></ul><button class="btn ghost" data-plan="A medida">Cotizar</button></div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="section scroll-target">
+      <p class="label">05 / CONTACTO — COTIZA TU PROYECTO</p>
+      <h2>CUÉNTANOS QUÉ QUIERES CONSTRUIR.</h2>
+      <div class="booking">
+        <div class="days" id="servicesList"></div>
+        <div class="classes" id="serviceDetail"></div>
+        <form id="quoteForm" action="#" method="post" novalidate>
+          <h3>Cotizar (demo)</h3>
+          <label class="sr-only" for="fName">Tu nombre</label>
+          <input required placeholder="Tu nombre" id="fName" name="nombre" type="text" autocomplete="name" maxlength="100" />
+          <label class="sr-only" for="fMail">Tu correo</label>
+          <input required type="email" placeholder="tu@correo.com" id="fMail" name="correo" autocomplete="email" inputmode="email" maxlength="254" />
+          <label class="sr-only" for="fService">Servicio</label>
+          <select id="fService" name="tipo"></select>
+          <label class="sr-only" for="fMsg">Describe tu proyecto</label>
+          <textarea id="fMsg" name="descripcion" rows="3" maxlength="2000" placeholder="Describe tu proyecto: ej. necesito una landing + sistema de citas"></textarea>
+          <!-- Honeypot anti-spam: los humanos no lo ven ni lo llenan -->
+          <div class="hp-wrap" aria-hidden="true">
+            <label class="sr-only" for="fWeb">No llenar</label>
+            <input type="text" id="fWeb" name="website" tabindex="-1" autocomplete="off" />
+          </div>
+          <button class="btn primary" type="submit">Enviar solicitud ↗</button>
+          <p class="muted small" id="quoteMsg">Completa el formulario y te contactaremos. Tus datos solo se usan para responder tu solicitud.</p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section community">
+      <h2>CÓDIGO LIMPIO.<br />ENTREGA <em>RÁPIDA.</em></h2>
+      <p>Web, móvil y sistemas. Un equipo para todo tu producto digital.</p>
+      <a class="btn primary" href="#contacto" data-scroll>Empezar ↗</a>
+    </section>
+
+    <section class="section">
+      <h2>PREGUNTAS FRECUENTES.</h2>
+      <div class="faq" id="faq"></div>
+    </section>
+
+    <!-- CASOS DE ÉXITO -->
+    <section id="casos" class="section alt scroll-target">
+      <p class="label">06 / CASOS DE ÉXITO — SISTEMAS EN PRODUCCIÓN</p>
+      <h2>SISTEMAS QUE YA <em>OPERAN.</em></h2>
+      <p class="muted">Apps reales que administran citas, lugares, paquetes y usuarios todos los días.</p>
+      <div class="grid4" id="casosGrid"></div>
+      <div class="cta">
+        <a href="#contacto" class="btn primary" data-scroll>Quiero un sistema así ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="fgrid">
+      <div><strong>SERVICIOS</strong><p>Desarrollo web · Apps móviles<br />Landings · Sistemas ERP<br />Invitaciones virtuales · Hojas de presentación</p></div>
+      <div><strong>CONTACTO</strong><p>hola@vjtech.mx<br />WhatsApp 000 000 0000</p></div>
+      <div><strong>VJTECH</strong><p>Agencia de software. Páginas, apps y sistemas a medida.</p></div>
+    </div>
+    <p class="copy">© 2026 VJTech — <a href="privacidad.html">Privacidad</a> · <a href="terminos.html">Términos</a> · <a href="#inicio" data-scroll>Back to top ↑</a></p>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
