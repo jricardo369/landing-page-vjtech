@@ -94,7 +94,17 @@ section:target{animation:targetGlow 1.2s ease}
 .faq details{background:#1e1e21;border:1px solid var(--line);border-radius:12px;padding:.9rem 1rem;margin:.6rem 0}
 footer{border-top:1px solid var(--line);padding:2rem 1.5rem;color:var(--mut)}
 .fgrid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;max-width:1100px;margin:0 auto}
+.fgrid a{color:var(--txt);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;text-decoration-color:var(--mut);transition:color 200ms ease,text-decoration-color 200ms ease}
+.fgrid a:hover{color:var(--lime);text-decoration-color:var(--lime)}
 .copy{text-align:center;margin-top:1.5rem;font-size:.82rem;font-family:var(--mono)}
+/* Botón flotante de WhatsApp (CTA persistente de conversión) */
+.wa-fab{position:fixed;z-index:25;right:calc(1.1rem + env(safe-area-inset-right,0px));bottom:calc(1.1rem + env(safe-area-inset-bottom,0px));display:inline-flex;align-items:center;gap:.55rem;padding:.8rem 1.15rem;border-radius:999px;background:#25d366;color:#062e14;text-decoration:none;font-weight:700;font-size:.9rem;border:1px solid rgba(255,255,255,.22);box-shadow:0 10px 30px rgba(0,0,0,.4);transition:transform 200ms ease,filter 200ms ease}
+.wa-fab svg{flex-shrink:0;display:block}
+.wa-fab::after{content:"";position:absolute;inset:0;border-radius:999px;pointer-events:none;animation:waPulse 2.6s ease-out infinite}
+.wa-fab:hover{transform:translateY(-2px);filter:brightness(1.06)}
+.wa-fab:active{transform:translateY(1px) scale(.98)}
+@keyframes waPulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.55)}70%{box-shadow:0 0 0 16px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+@media(max-width:560px){.wa-fab{padding:.9rem}.wa-fab-txt{display:none}}
 @media(max-width:900px){.links,.actions{display:none}.menu{display:block}.grid4,.grid3,.agenda,.booking,.fgrid{grid-template-columns:1fr}.hero{padding:3.5rem 0 2rem}.hero-inner{padding:0 1.2rem}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.track{animation:none}*{transition:none!important;animation:none!important}}
 /* Utilidades no visuales (seguridad/accesibilidad): no alteran el diseño */
