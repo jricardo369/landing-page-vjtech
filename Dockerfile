@@ -15,6 +15,9 @@ COPY sitemap.xml /usr/share/nginx/html/sitemap.xml
 COPY logo.png /usr/share/nginx/html/logo.png
 COPY logoBack.png /usr/share/nginx/html/logoBack.png
 COPY imgs /usr/share/nginx/html/imgs
+COPY manifest.json /usr/share/nginx/html/manifest.json
+COPY apple-touch-icon.png /usr/share/nginx/html/apple-touch-icon.png
+COPY icons /usr/share/nginx/html/icons
 
 EXPOSE 80
 
