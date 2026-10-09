@@ -4,6 +4,28 @@
 // futura lógica de correos / migración a Angular (ver window.VJTech al final).
 'use strict';
 
+/* ============ Splash de carga ============
+   Cubre el primer render al abrir desde acceso directo en el móvil (PWA
+   standalone) para que no se vea una pantalla en blanco. Se oculta al
+   evento load; el CSS lo oculta solo a los 4s si el JS falla. */
+(function initSplash() {
+  const sp = document.getElementById('splash');
+  if (!sp) return;
+  const MIN_MS = 450;
+  const start = Date.now();
+  let hidden = false;
+  function hide() {
+    if (hidden) return;
+    hidden = true;
+    sp.classList.add('hide');
+    setTimeout(() => sp.remove(), 500);
+  }
+  function onReady() { setTimeout(hide, Math.max(0, MIN_MS - (Date.now() - start))); }
+  if (document.readyState === 'complete') onReady();
+  else addEventListener('load', onReady);
+  setTimeout(hide, 4000); // red de seguridad: nunca dejar el splash trabado
+})();
+
 /* ============ Config (futuro backend / correos) ============
    API_BASE: '' = modo demo (no hay red, no sale PII del navegador).
    Para activar envío real: https://tu-dominio (HTTPS) y ENDPOINT.
